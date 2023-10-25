@@ -9,6 +9,7 @@ TagManager:
   - EnnemisForts
   - LimiteBalles
   - GigaBullet
+  - Bullet
   layers:
   - Default
   - TransparentFX

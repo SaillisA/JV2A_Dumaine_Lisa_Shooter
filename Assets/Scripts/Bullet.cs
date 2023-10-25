@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     private int aleaDrop;
     public Rigidbody2D monRigidBody;
     public float speed;
-
+    public int bulletDegat;
     public GameObject drop;
 
 
@@ -25,7 +25,9 @@ public class Bullet : MonoBehaviour
         //ennemis de base avec 1 pv
         if (enemiEnCollision == true)
         {
-            enemiEnCollision.pointDeVie -= 1;
+
+            enemiEnCollision.pointDeVie -= bulletDegat;
+
             if (enemiEnCollision.pointDeVie <= 0)
             {
                 Destroy(collision.gameObject);

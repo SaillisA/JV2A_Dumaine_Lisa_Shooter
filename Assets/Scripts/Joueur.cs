@@ -6,6 +6,7 @@ public class MovementEtTir : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject gigaBullet;
+    
     public Transform parent;
     public Transform limitL;
     public Transform limitR;
