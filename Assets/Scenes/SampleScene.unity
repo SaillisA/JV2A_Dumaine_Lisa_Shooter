@@ -1716,7 +1716,7 @@ MonoBehaviour:
   drop: {fileID: 914514246819791066, guid: 0a3fc5b2e021b9046a426d7bf51addb8, type: 3}
   joueur: {fileID: 983346834}
   dropCompteur: 0
-  speed: 0.11
+  speed: 0.07
 --- !u!60 &983346839
 PolygonCollider2D:
   m_ObjectHideFlags: 0

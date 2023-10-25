@@ -102,6 +102,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   bulletEnnemis: {fileID: 3747454292509077925, guid: 12e130844e3a7794c81d798916c78eda, type: 3}
   bulletEnnemisTreFor: 1
+  bulletTimer: 0
 --- !u!114 &1938110297485751540
 MonoBehaviour:
   m_ObjectHideFlags: 0

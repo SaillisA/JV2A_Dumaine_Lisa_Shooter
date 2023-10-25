@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnnemisTirs : MonoBehaviour
 {
-    public Transform parent;
     public GameObject bulletEnnemis;
-    public bool bulletEnnemisTreFor = true;
-    private int bulletTimer = 0;
+    public Transform parent;
+    
+    //public bool bulletEnnemisTreFor = true;
+    public float bulletTimer = 0.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,21 +20,14 @@ public class EnnemisTirs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bulletTimer++;
+        bulletTimer+= Time.deltaTime;
 
-        if (bulletTimer == 120)
+        if (bulletTimer >= 2.0f)
         {         
             Instantiate(bulletEnnemis, parent.position, parent.rotation);
-            bulletTimer = 0;
+            bulletTimer = 0.0f;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            print("ouille");
-            Destroy(collision.gameObject);
-        }
-    }
+    
 }
