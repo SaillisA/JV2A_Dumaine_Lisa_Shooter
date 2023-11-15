@@ -10,6 +10,8 @@ TagManager:
   - LimiteBalles
   - GigaBullet
   - Bullet
+  - Argent
+  - EnnemisTreForts
   layers:
   - Default
   - TransparentFX

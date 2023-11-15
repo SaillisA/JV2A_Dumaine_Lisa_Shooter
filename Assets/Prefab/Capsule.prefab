@@ -104,6 +104,7 @@ MonoBehaviour:
   speed: 12
   bulletDegat: 1
   drop: {fileID: 914514246819791066, guid: 0a3fc5b2e021b9046a426d7bf51addb8, type: 3}
+  piece: {fileID: 8549938713179623065, guid: 28c81ab480c6a6343befd88f0e96f2d1, type: 3}
 --- !u!50 &6863447708074395207
 Rigidbody2D:
   serializedVersion: 4

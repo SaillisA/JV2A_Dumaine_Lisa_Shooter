@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public float speed;
     public int bulletDegat;
     public GameObject drop;
+    public GameObject piece;
+
 
 
     // Start is called before the first frame update
@@ -31,11 +33,15 @@ public class Bullet : MonoBehaviour
             if (enemiEnCollision.pointDeVie <= 0)
             {
                 Destroy(collision.gameObject);
-                aleaDrop = Random.Range(1, 3);
+                aleaDrop = Random.Range(1, 5);
 
                 if (aleaDrop == 1)
                 {
                     Instantiate(drop, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+                }
+                else
+                {
+                    Instantiate(piece, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
                 }
 
             }

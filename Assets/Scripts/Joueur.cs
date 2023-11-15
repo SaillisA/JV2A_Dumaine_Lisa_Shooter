@@ -12,8 +12,10 @@ public class MovementEtTir : MonoBehaviour
     public Transform limitR;
 
     public GameObject drop;
+    public GameObject pieces;
     public GameObject joueur;
     public int dropCompteur = 0;
+    public int piecesCompteur = 0;
 
 
 
@@ -62,6 +64,11 @@ public class MovementEtTir : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bonus")
+        {
+            dropCompteur = 5;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Argent")
         {
             dropCompteur = 5;
             Destroy(collision.gameObject);
