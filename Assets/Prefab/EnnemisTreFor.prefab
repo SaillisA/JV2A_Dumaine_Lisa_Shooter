@@ -101,6 +101,7 @@ MonoBehaviour:
   pointDeVie: 10
   bulletTimer: 0
   bulletEnnemis: {fileID: 3747454292509077925, guid: 12e130844e3a7794c81d798916c78eda, type: 3}
+  vitesse: 0.01
 --- !u!60 &6848102347505311149
 PolygonCollider2D:
   m_ObjectHideFlags: 0

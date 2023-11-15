@@ -9,14 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 330690868964083747}
-  - component: {fileID: 4819524458355231120}
   - component: {fileID: 6596798036647082767}
+  - component: {fileID: 4819524458355231120}
   - component: {fileID: 6863447708074395207}
   - component: {fileID: 3588231135627767681}
   - component: {fileID: 5144115588052714144}
   m_Layer: 0
-  m_Name: Capsule 2
-  m_TagString: GigaBullet
+  m_Name: balle
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,28 +31,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4819524458355231120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6470470209835675063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9e90b22d5293a4894afc94eb6acbc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monRigidBody: {fileID: 6863447708074395207}
-  speed: 12
-  bulletDegat: 3
-  drop: {fileID: 914514246819791066, guid: 0a3fc5b2e021b9046a426d7bf51addb8, type: 3}
-  piece: {fileID: 8549938713179623065, guid: 28c81ab480c6a6343befd88f0e96f2d1, type: 3}
 --- !u!212 &6596798036647082767
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -105,6 +88,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4819524458355231120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6470470209835675063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9e90b22d5293a4894afc94eb6acbc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monRigidBody: {fileID: 6863447708074395207}
+  speed: 12
+  bulletDegat: 1
+  drop: {fileID: 914514246819791066, guid: 0a3fc5b2e021b9046a426d7bf51addb8, type: 3}
+  piece: {fileID: 8549938713179623065, guid: 28c81ab480c6a6343befd88f0e96f2d1, type: 3}
 --- !u!50 &6863447708074395207
 Rigidbody2D:
   serializedVersion: 4
@@ -218,8 +218,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.006526005
-        value: 0.10655016
+        time: 0.0017271158
+        value: 0.09629623
         inSlope: 0
         outSlope: 0
         tangentMode: 0
