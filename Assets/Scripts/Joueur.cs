@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MovementEtTir : MonoBehaviour
 {
@@ -11,10 +12,10 @@ public class MovementEtTir : MonoBehaviour
     public Transform limitL;
     public Transform limitR;
 
-    public GameObject drop;
+    public GameObject bonus;
     public GameObject pieces;
     public GameObject joueur;
-    public int dropCompteur = 0;
+    public int bonusCompteur = 0;
     public int piecesCompteur = 0;
 
 
@@ -40,9 +41,9 @@ public class MovementEtTir : MonoBehaviour
         }       
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(dropCompteur > 0)
+            if(bonusCompteur > 0)
             {
-                dropCompteur -= 1;
+                bonusCompteur -= 1;
                 Instantiate(gigaBullet, parent.position, parent.rotation);
             }
             else
@@ -65,13 +66,15 @@ public class MovementEtTir : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bonus")
         {
-            dropCompteur = 5;
+            bonusCompteur = 5;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Argent")
         {
-            dropCompteur = 5;
+            piecesCompteur++ ;
             Destroy(collision.gameObject);
+
+            Debug.Log(piecesCompteur);
         }
     }
 
