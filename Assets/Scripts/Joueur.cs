@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Joueur : MonoBehaviour
 {
@@ -75,6 +76,7 @@ public class Joueur : MonoBehaviour
             piecesCompteur++;
             Destroy(collision.gameObject);
 
+            score.text = "Pieces : " + piecesCompteur;
             Debug.Log(piecesCompteur);
         }
     }

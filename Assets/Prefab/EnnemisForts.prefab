@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointDeVie: 3
-  bulletTimer: 0
+  balleTempsRecharge: 0
+  positionEnnemisTemps: 0
   bulletEnnemis: {fileID: 0}
-  vitesse: 0.01
+  vitesse: 0.001
 --- !u!58 &6830109862939501880
 CircleCollider2D:
   m_ObjectHideFlags: 0
