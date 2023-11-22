@@ -2,9 +2,6 @@
 
 Différents types de tir
 
-modifier le score : faire en sorte qu'en killant 1 ennemis, ça augmente le score
-(petits ennemis : 1 points; Ennemis for : 3 points; Ennemis trefor : 5 points)
-
 
 Spawn d'ennemis :
 -creer un empti vide "ennemisCreation"
