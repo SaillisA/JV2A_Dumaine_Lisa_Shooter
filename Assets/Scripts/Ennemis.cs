@@ -6,6 +6,7 @@ public class Ennemis : MonoBehaviour
 {
     //Stats de base:
     public int pointDeVie;
+    public int pointDeScore;
 
     //public bool bulletEnnemisTreFor = true;
     public float balleTempsRecharge = 0.0f;
@@ -30,14 +31,17 @@ public class Ennemis : MonoBehaviour
             balleTempsRecharge = 0.0f;
         }
 
+
         if (positionEnnemisTemps <= 4.0f || positionEnnemisTemps >= 12.0f && positionEnnemisTemps <= 16.0f)
         {
             transform.position += Vector3.right * vitesse;
         }
+
         if (positionEnnemisTemps >= 4.0f && positionEnnemisTemps <= 12.0f)
         {
             transform.position += Vector3.left * vitesse;
         }
+
         if(positionEnnemisTemps >= 16.0f)
         {
             positionEnnemisTemps = 0;

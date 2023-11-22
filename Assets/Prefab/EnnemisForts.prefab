@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointDeVie: 3
+  pointDeScore: 3
   balleTempsRecharge: 0
   positionEnnemisTemps: 0
   bulletEnnemis: {fileID: 0}

@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - Argent
   - EnnemisTreForts
+  - ballesEnnemis
   layers:
   - Default
   - TransparentFX

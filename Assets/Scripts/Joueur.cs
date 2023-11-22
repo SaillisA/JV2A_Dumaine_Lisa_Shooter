@@ -13,13 +13,18 @@ public class Joueur : MonoBehaviour
     public Transform limitL;
     public Transform limitR;
 
-    public GameObject bonus;
-    public GameObject pieces;
+    //public GameObject bonus;
+    //public GameObject pieces;
+
     public GameObject joueur;
     public int bonusCompteur = 0;
+    public int vieCompteur = 5;
+
+    public TextMeshProUGUI piecesAffiche;
     public int piecesCompteur = 0;
 
     public TextMeshProUGUI score;
+    public int scoreCompteur;
 
 
     public float speed = 0.5f;
@@ -28,7 +33,7 @@ public class Joueur : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -63,6 +68,16 @@ public class Joueur : MonoBehaviour
         {
             transform.position = new Vector3(limitL.position.x, transform.position.y, transform.position.z);
         }
+
+
+        if(vieCompteur <=0 )
+        {
+            Debug.Log("Perdu NULLOS");
+        }
+
+        score.text = "Score : " + scoreCompteur;
+
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -76,8 +91,14 @@ public class Joueur : MonoBehaviour
             piecesCompteur++;
             Destroy(collision.gameObject);
 
-            score.text = "Pieces : " + piecesCompteur;
+            piecesAffiche.text = "Pieces : " + piecesCompteur;
             Debug.Log(piecesCompteur);
+        }
+        if (collision.gameObject.tag == "ballesEnnemis")
+        {
+            Debug.Log("Ouille");
+            vieCompteur--;
+            Destroy(collision.gameObject);
         }
     }
 }

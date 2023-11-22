@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Bullet : MonoBehaviour
 {
@@ -11,12 +12,19 @@ public class Bullet : MonoBehaviour
     public GameObject drop;
     public GameObject piece;
 
-
+    public Joueur joueurChangementScore;
 
     // Start is called before the first frame update
     void Start()
     {
         monRigidBody.velocity = Vector3.up*speed;
+
+        joueurChangementScore = FindObjectOfType<Joueur>();
+
+    }
+
+    void Update()
+    {
 
     }
 
@@ -24,7 +32,7 @@ public class Bullet : MonoBehaviour
     {
 
         Ennemis enemiEnCollision = collision.gameObject.GetComponent<Ennemis>();
-        //ennemis de base avec 1 pv
+        
         if (enemiEnCollision == true)
         {
 
@@ -42,7 +50,9 @@ public class Bullet : MonoBehaviour
                 else
                 {
                     Instantiate(piece, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
-                }
+                };
+
+                joueurChangementScore.scoreCompteur+= enemiEnCollision.pointDeScore;
 
             }
         }
