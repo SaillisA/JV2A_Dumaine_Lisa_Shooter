@@ -49,10 +49,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monRigidBody: {fileID: 6863447708074395207}
-  speed: 12
-  bulletDegat: 3
+  vitesse: 13
+  balleDegat: 3
   drop: {fileID: 914514246819791066, guid: 0a3fc5b2e021b9046a426d7bf51addb8, type: 3}
   piece: {fileID: 8549938713179623065, guid: 28c81ab480c6a6343befd88f0e96f2d1, type: 3}
+  explosionBlanche: {fileID: 4500455473038169297, guid: 28d01619c0e15e54ba2cb1a965293b05, type: 3}
+  explosionBleue: {fileID: 1996104334768617850, guid: 1b07436658979664c88307ada506d4e9, type: 3}
+  explosionViolette: {fileID: 667558964136673482, guid: cf2f7d13a2ddda9498c2c35a94da7ab6, type: 3}
+  joueurChangementScore: {fileID: 0}
 --- !u!212 &6596798036647082767
 SpriteRenderer:
   m_ObjectHideFlags: 0

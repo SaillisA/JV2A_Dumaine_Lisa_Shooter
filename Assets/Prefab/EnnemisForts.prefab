@@ -103,7 +103,7 @@ MonoBehaviour:
   balleTempsRecharge: 0
   positionEnnemisTemps: 0
   bulletEnnemis: {fileID: 0}
-  vitesse: 0.001
+  vitesse: 0.007
 --- !u!58 &6830109862939501880
 CircleCollider2D:
   m_ObjectHideFlags: 0

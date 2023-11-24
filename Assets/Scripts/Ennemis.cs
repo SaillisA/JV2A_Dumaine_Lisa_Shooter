@@ -31,7 +31,7 @@ public class Ennemis : MonoBehaviour
             balleTempsRecharge = 0.0f;
         }
 
-
+        //deplacement des ennemis
         if (positionEnnemisTemps <= 4.0f || positionEnnemisTemps >= 12.0f && positionEnnemisTemps <= 16.0f)
         {
             transform.position += Vector3.right * vitesse;

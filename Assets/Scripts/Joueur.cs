@@ -6,28 +6,31 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class Joueur : MonoBehaviour
 {
-    public GameObject bullet;
-    public GameObject gigaBullet;
+    public GameObject balle;
+    public GameObject gigaBalle;
 
+    //pour tirer les balles
     public Transform parent;
     public Transform limitL;
     public Transform limitR;
 
-    //public GameObject bonus;
-    //public GameObject pieces;
-
     public GameObject joueur;
     public int bonusCompteur = 0;
-    public int vieCompteur = 5;
+    public float speed = 0.5f;
 
+    //pour l'Ui
     public TextMeshProUGUI piecesAffiche;
     public int piecesCompteur = 0;
 
     public TextMeshProUGUI score;
     public int scoreCompteur;
 
+    public TextMeshProUGUI vie;
+    public int vieCompteur = 5;
 
-    public float speed = 0.5f;
+    //VFX
+    public GameObject joueurDegat;
+    public GameObject joueurExplose;
 
 
     // Start is called before the first frame update
@@ -52,11 +55,11 @@ public class Joueur : MonoBehaviour
             if (bonusCompteur > 0)
             {
                 bonusCompteur -= 1;
-                Instantiate(gigaBullet, parent.position, parent.rotation);
+                Instantiate(gigaBalle, parent.position, parent.rotation);
             }
             else
             {
-                Instantiate(bullet, parent.position, parent.rotation);
+                Instantiate(balle, parent.position, parent.rotation);
             }
         }
 
@@ -72,7 +75,10 @@ public class Joueur : MonoBehaviour
 
         if(vieCompteur <=0 )
         {
-            Debug.Log("Perdu NULLOS");
+            vie.text = "Vitalite : mort";
+            Debug.Log("Joueur mort");
+            Instantiate(joueurExplose,joueur.gameObject.transform.position, joueur.gameObject.transform.rotation);
+            Destroy(joueur.gameObject);
         }
 
         score.text = "Score : " + scoreCompteur;
@@ -98,7 +104,9 @@ public class Joueur : MonoBehaviour
         {
             Debug.Log("Ouille");
             vieCompteur--;
+            vie.text = "Vitalite : " + vieCompteur;
             Destroy(collision.gameObject);
+            Instantiate(joueurDegat,joueur.gameObject.transform.position, joueur.gameObject.transform.rotation);
         }
     }
 }

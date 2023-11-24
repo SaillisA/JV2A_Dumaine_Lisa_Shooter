@@ -103,7 +103,7 @@ MonoBehaviour:
   balleTempsRecharge: 0
   positionEnnemisTemps: 0
   bulletEnnemis: {fileID: 0}
-  vitesse: 0.001
+  vitesse: 0.007
 --- !u!60 &8650566655662361808
 PolygonCollider2D:
   m_ObjectHideFlags: 0
